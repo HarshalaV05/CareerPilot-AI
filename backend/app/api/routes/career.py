@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from app.services.career_service import CareerService
 
 router = APIRouter(
     prefix="/career",
@@ -8,10 +9,4 @@ router = APIRouter(
 
 @router.get("/recommendations")
 async def recommendations():
-    return {
-        "recommended_roles": [
-            "Software Engineer",
-            "AI Engineer",
-            "Cloud Engineer"
-        ]
-    }
+    return CareerService.get_recommendations()

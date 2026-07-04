@@ -1,7 +1,14 @@
 from fastapi import FastAPI
 
+from app.database.database import engine
+from app.database.base import Base
+from app.models.resume import Resume
+from app.models.student import Student
+
 from app.core.config import settings
 from app.api.router import api_router
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title=settings.APP_NAME,

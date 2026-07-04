@@ -1,0 +1,412 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 10206
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(## ATS Resume Analysis: Software QA Engineer) Tj
+T* () Tj
+T* (**Overall Assessment:**) Tj
+T* (Chandan S Gowda presents a highly accomplished resume with a) Tj
+T* (strong background in software engineering, full-stack development,) Tj
+T* (AI/ML solutions, and leadership. While the resume showcases) Tj
+T* (impressive technical skills and project management capabilities, its) Tj
+T* (primary focus is on software development rather than dedicated Quality) Tj
+T* (Assurance. The candidate demonstrates some direct QA experience,) Tj
+T* (particularly at Commvault, but the overall emphasis is misaligned with a) Tj
+T* (pure Software QA Engineer role.) Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 1. ATS Score: 68/100) Tj
+T* () Tj
+T* (**Reasoning:**) Tj
+T* (The resume scores reasonably well due to specific mentions of "manual) Tj
+T* (test cases," "regression cycles," "validated key projects," "automating) Tj
+T* (test cases," "reducing manual QA efforts," and interests like "Bug) Tj
+T* (Bounty" and "vulnerability assessment." These terms directly align with) Tj
+T* (several keywords and responsibilities in the job description. However,) Tj
+T* (the score is not higher because key QA-specific actions like explicit bug) Tj
+T* (*documentation*, *tracking*, *reporting* with reproduction steps, and) Tj
+T* (familiarity with standard bug tracking tools \(Jira, Trello\) are not clearly) Tj
+T* (articulated or are entirely missing. The overall profile also leans heavily) Tj
+T* (towards development, which might dilute the QA focus for an ATS.) Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 2. Resume Summary) Tj
+T* () Tj
+T* (Chandan S Gowda is a passionate and high-achieving Software) Tj
+T* (Engineer with a strong academic background \(9.3 CGPA in Computer) Tj
+T* (Science\) and experience spanning AI-driven solution development,) Tj
+T* (full-stack application building, and project leadership. Currently a) Tj
+T* (Software Engineer at Commvault, they have contributed to AI) Tj
+T* (ecosystem development, automated VM workload test cases, validated) Tj
+T* (key projects, and executed complex manual and regression testing) Tj
+T* (cycles. Chandan also has experience as a Software Developer at) Tj
+T* (HeyNox, a Full Stack App Developer for Google Summer of Code, and) Tj
+T* (founded a digital solutions agency. Their diverse technical skill set) Tj
+T* (includes Python, Flutter, Django, FastAPI, Langchain, MySQL, Git,) Tj
+T* (GitHub, Selenium, and an understanding of Web Application Security.) Tj
+T* (They demonstrate strong leadership, problem-solving abilities, and a) Tj
+T* (proven track record in hackathons and open-source contributions.) Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 3. Strengths) Tj
+T* () Tj
+T* (*   **Direct QA Experience:** Explicitly mentions "executed complex) Tj
+T* (manual test cases across three regression cycles" and "validated key) Tj
+T* (projects" at Commvault, directly aligning with core responsibilities.) Tj
+T* (*   **Test Automation Exposure:** "Automated and managed multiple) Tj
+T* (VM workload test cases" and "reducing manual QA efforts by 40%") Tj
+T* (highlights valuable automation skills relevant to modern QA.) Tj
+T* (*   **Bug Identification & Security Focus:** "Reported 10+ critical) Tj
+T* (security issues" during vulnerability assessments and listing "Bug) Tj
+T* (Bounty" as an interest strongly indicates an ability and passion for) Tj
+T* (identifying flaws and defects. "Fixed multiple UI issues" also implies) Tj
+T* (defect identification.) Tj
+T* (*   **Understanding of SDLC:** Extensive experience in software) Tj
+T* (development, from GSoC to professional roles, demonstrates a very) Tj
+T* (strong understanding of the Software Development Lifecycle.) Tj
+T* (*   **Technical Proficiency:** A broad range of programming languages) Tj
+T* (\(Python, Dart, JavaScript, Go\) and technologies \(Flutter, Django,) Tj
+T* (FastAPI, Langchain, MySQL, Git, GitHub, Selenium, Azure\) indicates) Tj
+T* (adaptability and a solid technical foundation. Selenium is a direct QA) Tj
+T* (automation tool.) Tj
+T* (*   **Attention to Detail:** Implied by high academic achievement,) Tj
+T* (vulnerability assessments, and participation in hackathons.) Tj
+T* (*   **Collaboration:** Working within an AI team and leading projects) Tj
+T* (suggests strong collaborative skills.) Tj
+T* (*   **Communication Skills:** Leadership roles, founding a company, and) Tj
+T* (GSoC participation imply strong communication abilities.) Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 4. Weaknesses) Tj
+T* () Tj
+T* (*   **Lack of Explicit Bug Tracking Tool Experience:** While `Git &) Tj
+T* (GitHub` are listed, there's no explicit mention of using bug tracking tools) Tj
+T* (like Jira, Trello, or GitHub *Issues* for formal bug documentation and) Tj
+T* (tracking.) Tj
+T* (*   **Limited Detail on Bug Reporting:** The resume does not explicitly) Tj
+T* (detail the process of *creating clear bug reports with reproduction steps*) Tj
+T* (for developers, which is a key responsibility.) Tj
+T* (*   **Understated QA Focus:** The resume is heavily geared towards) Tj
+T* (software development, AI, and full-stack roles, which may lead) Tj
+T* (recruiters to overlook the relevant QA experience embedded within.) Tj
+T* (*   **Missing Specifics on Cross-Device/OS Testing:** The job) Tj
+T* (description mentions "Verify app stability across different devices and) Tj
+T* (operating systems," which is not explicitly covered in the resume.) Tj
+T* (*   **Automation Skill Details:** While Selenium is listed, there's no) Tj
+T* (detailed context or projects where it was specifically used for QA) Tj
+T* (automation beyond the general mention of "automating test cases.") Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 5. Missing Skills) Tj
+T* () Tj
+T* (*   **Jira/Trello:** Explicit familiarity and experience with specific bug) Tj
+T* (tracking and project management tools.) Tj
+T* (*   **Bug Reporting Best Practices:** Demonstrated ability to write clear,) Tj
+T* (concise bug reports with detailed reproduction steps.) Tj
+T* (*   **Cross-Device/OS Testing:** Specific experience or methodology in) Tj
+T* (verifying application stability across various platforms.) Tj
+T* (*   **Test Case Management Tools:** While not explicitly mentioned in) Tj
+T* (the JD, experience with these is often beneficial for QA.) Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 6. Improvement Suggestions) Tj
+T* () Tj
+T* (1.  **Tailor the Professional Summary:** Rephrase the initial summary to) Tj
+T* (highlight QA strengths and career aspirations more prominently, e.g.,) Tj
+T* ("Highly analytical Software Engineer with a passion for ensuring product) Tj
+T* (quality and a proven track record in test automation, manual testing, and) Tj
+T* (defect identification for scalable AI-driven solutions.") Tj
+T* (2.  **Elevate QA Experience:** For the Commvault role, expand on the) Tj
+T* (QA-related bullet points:) Tj
+T* (    *   Explicitly mention *how* bugs were identified, documented, and) Tj
+T* (reported. For example, "Identified and documented critical UI issues,) Tj
+T* (collaborating with developers to implement timely fixes.") Tj
+T* (    *   If bug tracking tools were used, state them: "Utilized [Jira/GitHub) Tj
+T* (Issues] for tracking defects and managing test cases.") Tj
+T* (    *   Detail the "complex manual test cases" and "regression cycles") Tj
+T* (further, perhaps mentioning the scope \(e.g., specific features, types of) Tj
+T* (testing\).) Tj
+T* (    *   Elaborate on the impact of automation on *quality* as well as) Tj
+T* (efficiency.) Tj
+T* (3.  **Create a Dedicated "Quality Assurance" Section \(Optional but) Tj
+T* (Recommended\):** Given the development focus, a small section) Tj
+T* (detailing specific QA methodologies, types of testing performed, and) Tj
+T* (tools used \(like Selenium for automation\) would be highly beneficial.) Tj
+T* (4.  **Incorporate Missing Keywords:** If applicable, weave in keywords) Tj
+T* (like "bug reports," "test plans," "test cases," "user experience testing,") Tj
+T* ("cross-browser/device testing" into your experience bullet points.) Tj
+T* (5.  **Expand on "Bug Bounty" and "Vulnerability Assessment":** Briefly) Tj
+T* (explain the scope or significance of these activities under a relevant) Tj
+T* (section \(e.g., "Involvement" or "Projects/Contributions"\) to showcase) Tj
+T* (direct experience in finding and reporting defects.) Tj
+T* (6.  **Quantify QA Impact:** Where possible, use numbers to highlight) Tj
+T* (achievements in QA \(e.g., "Identified X critical bugs," "Reduced bug) Tj
+T* (reoccurrence by Y%"\).) Tj
+T* (7.  **Review Skills Section:** Ensure `Selenium` is clearly presented as) Tj
+T* (a QA automation tool. Consider adding a small sub-section for "Testing) Tj
+T* (Tools" if you have experience beyond what's listed.) Tj
+T* () Tj
+T* (---) Tj
+T* () Tj
+T* (### 7. Recommended Career Roles) Tj
+T* () Tj
+T* (Based on the current resume, Chandan is a strong candidate for:) Tj
+T* () Tj
+T* (*   **Software Developer/Engineer \(AI/ML Focused\):** This aligns best) Tj
+T* (with the majority of their professional experience and stated passions.) Tj
+T* (*   **Full Stack Developer/Engineer:** Their GSoC and other project) Tj
+T* (experiences demonstrate strong capabilities across the stack.) Tj
+T* (*   **Backend Developer/Engineer:** HeyNox experience and) Tj
+T* (NodeJS/Django skills are a good fit.) Tj
+T* (*   **SDET \(Software Development Engineer in Test\):** Given their) Tj
+T* (development background combined with test automation and validation) Tj
+T* (experience, an SDET role would be an excellent blend of their skills.) Tj
+T* (This would allow them to leverage both their coding and QA expertise.) Tj
+T* (*   **Automation Engineer:** Their experience in automating test cases) Tj
+T* (positions them well for roles focused purely on building and maintaining) Tj
+T* (test automation frameworks.) Tj
+T* (*   **Associate/Junior Software QA Engineer \(if tailored\):** With) Tj
+T* (significant adjustments to highlight QA more prominently, they could) Tj
+T* (certainly excel in this role, bringing strong technical prowess to the) Tj
+T* (team.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20260621175849+05'30')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000010411 00000 n 
+0000012228 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000010468 00000 n 
+0000010593 00000 n 
+0000010723 00000 n 
+0000010856 00000 n 
+0000010993 00000 n 
+0000011116 00000 n 
+0000011245 00000 n 
+0000011377 00000 n 
+0000011513 00000 n 
+0000011641 00000 n 
+0000011768 00000 n 
+0000011897 00000 n 
+0000012030 00000 n 
+0000012132 00000 n 
+0000012476 00000 n 
+0000012562 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <397283C5D52C9FA8C8F330513E41D803> <397283C5D52C9FA8C8F330513E41D803> ]
+>>
+startxref
+12666
+%%EOF
