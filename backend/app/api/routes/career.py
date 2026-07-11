@@ -1,5 +1,7 @@
 from fastapi import APIRouter
-from app.services.career_service import CareerService
+
+from app.schemas.career_schema import CareerRequest
+from app.ai.granite.granite_service import GraniteService
 
 router = APIRouter(
     prefix="/career",
@@ -7,6 +9,11 @@ router = APIRouter(
 )
 
 
-@router.get("/recommendations")
-async def recommendations():
-    return CareerService.get_recommendations()
+@router.post("/recommend")
+async def recommend(request: CareerRequest):
+
+    result = GraniteService.recommend_career(
+        request.profile
+    )
+
+    return result

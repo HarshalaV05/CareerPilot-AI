@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.api.routes import (
+    ai,
     health,
     student,
     resume,
@@ -19,3 +20,4 @@ api_router.include_router(career.router)
 api_router.include_router(roadmap.router)
 api_router.include_router(interview.router)
 api_router.include_router(dashboard.router)
+api_router.include_router(ai.router)

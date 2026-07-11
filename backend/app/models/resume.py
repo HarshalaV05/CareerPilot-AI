@@ -15,3 +15,26 @@ class Resume(Base):
     extracted_text = Column(Text)
 
     upload_date = Column(String)
+
+    # AI Analysis
+    ats_score = Column(Integer)
+
+    technical_skills = Column(Text)
+
+    soft_skills = Column(Text)
+
+    strengths = Column(Text)
+
+    weaknesses = Column(Text)
+
+    missing_skills = Column(Text)
+
+    career_recommendation = Column(Text)
+
+    recommended_job_roles = Column(Text)
+
+    learning_roadmap = Column(Text)
+
+    resume_summary = Column(Text)
+
+    improvement_suggestions = Column(Text)
