@@ -4,6 +4,7 @@ origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "https://career-pilot-ai-olive.vercel.app",
+    "https://career-pilot-ai-git-main-harshalavmarakala-7512s-projects.vercel.app",
 ]
 
 app.add_middleware(
