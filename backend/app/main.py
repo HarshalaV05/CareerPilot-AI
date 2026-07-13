@@ -9,37 +9,53 @@ from app.models.student import Student
 from app.core.config import settings
 from app.api.router import api_router
 
-# Create database tables
+# ---------------------------------------------------
+# Create Database Tables
+# ---------------------------------------------------
+
 Base.metadata.create_all(bind=engine)
 
-# Create FastAPI app FIRST
+# ---------------------------------------------------
+# Create FastAPI App
+# ---------------------------------------------------
+
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
     description="Enterprise Agentic Career Intelligence Platform"
 )
 
-# CORS
-origins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://career-pilot-ai-olive.vercel.app",
-    "https://career-pilot-ai-git-main-harshalavmarakala-7512s-projects.vercel.app",
-]
-
+# ---------------------------------------------------
+# CORS Configuration
+# ---------------------------------------------------
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+
+    # Local Development
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+
+    # Allow ALL Vercel deployments
+    allow_origin_regex=r"https://.*\.vercel\.app",
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Register API routes
+# ---------------------------------------------------
+# Register API Routes
+# ---------------------------------------------------
+
 app.include_router(api_router)
 
-# Root endpoint
+# ---------------------------------------------------
+# Root Endpoint
+# ---------------------------------------------------
+
 @app.get("/", tags=["Root"])
 async def root():
     return {
@@ -48,8 +64,11 @@ async def root():
         "status": "Running"
     }
 
-# Health endpoint
-@app.get("/health")
+# ---------------------------------------------------
+# Health Check
+# ---------------------------------------------------
+
+@app.get("/health", tags=["Health"])
 async def health():
     return {
         "status": "healthy"
