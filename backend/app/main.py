@@ -27,6 +27,7 @@ origins = [
     "https://career-pilot-ai-git-main-harshalavmarakala-7512s-projects.vercel.app",
 ]
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
