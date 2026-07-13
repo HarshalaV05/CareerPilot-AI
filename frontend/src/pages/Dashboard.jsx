@@ -1,4 +1,5 @@
 import Layout from "../components/layout/Layout";
+import { useNavigate } from "react-router-dom";
 import {
   FaFileAlt,
   FaBriefcase,
@@ -7,11 +8,12 @@ import {
 } from "react-icons/fa";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-700 to-indigo-800 rounded-3xl p-10 text-white shadow-xl">
-
         <h1 className="text-5xl font-bold">
           Welcome to CareerPilot AI 🚀
         </h1>
@@ -23,26 +25,30 @@ function Dashboard() {
         </p>
 
         <div className="mt-8 flex gap-4">
-
-          <button className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-xl hover:bg-gray-200 transition">
+          <button
+            onClick={() => navigate("/resume")}
+            className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-xl hover:bg-gray-200 transition"
+          >
             Analyze Resume
           </button>
 
-          <button className="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-blue-700 transition">
+          <button
+            onClick={() => navigate("/career")}
+            className="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-blue-700 transition"
+          >
             Explore Careers
           </button>
-
         </div>
       </div>
 
       {/* Feature Cards */}
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
 
         {/* Resume */}
-
-        <div className="bg-slate-800 rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300">
-
+        <div
+          onClick={() => navigate("/resume")}
+          className="bg-slate-800 rounded-3xl p-8 shadow-xl hover:-translate-y-2 hover:cursor-pointer transition duration-300"
+        >
           <FaFileAlt className="text-5xl text-blue-500 mb-6" />
 
           <h2 className="text-2xl text-white font-bold">
@@ -56,19 +62,16 @@ function Dashboard() {
           </p>
 
           <button className="mt-8 flex items-center gap-2 text-blue-400 hover:text-blue-300">
-
             Analyze Resume
-
             <FaArrowRight />
-
           </button>
-
         </div>
 
         {/* Career */}
-
-        <div className="bg-slate-800 rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300">
-
+        <div
+          onClick={() => navigate("/career")}
+          className="bg-slate-800 rounded-3xl p-8 shadow-xl hover:-translate-y-2 hover:cursor-pointer transition duration-300"
+        >
           <FaBriefcase className="text-5xl text-yellow-400 mb-6" />
 
           <h2 className="text-2xl text-white font-bold">
@@ -81,19 +84,16 @@ function Dashboard() {
           </p>
 
           <button className="mt-8 flex items-center gap-2 text-yellow-400 hover:text-yellow-300">
-
             Explore Careers
-
             <FaArrowRight />
-
           </button>
-
         </div>
 
         {/* Interview */}
-
-        <div className="bg-slate-800 rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300">
-
+        <div
+          onClick={() => navigate("/interview")}
+          className="bg-slate-800 rounded-3xl p-8 shadow-xl hover:-translate-y-2 hover:cursor-pointer transition duration-300"
+        >
           <FaUserTie className="text-5xl text-purple-500 mb-6" />
 
           <h2 className="text-2xl text-white font-bold">
@@ -106,19 +106,14 @@ function Dashboard() {
           </p>
 
           <button className="mt-8 flex items-center gap-2 text-purple-400 hover:text-purple-300">
-
             Start Practice
-
             <FaArrowRight />
-
           </button>
-
         </div>
 
       </div>
 
       {/* Progress */}
-
       <div className="bg-slate-800 rounded-3xl mt-10 p-8 shadow-xl">
 
         <h2 className="text-2xl font-bold text-white">
@@ -134,9 +129,7 @@ function Dashboard() {
             </div>
 
             <div className="w-full bg-slate-700 rounded-full h-3 mt-2">
-
               <div className="bg-blue-500 h-3 rounded-full w-0"></div>
-
             </div>
           </div>
 
@@ -147,9 +140,7 @@ function Dashboard() {
             </div>
 
             <div className="w-full bg-slate-700 rounded-full h-3 mt-2">
-
               <div className="bg-yellow-400 h-3 rounded-full w-0"></div>
-
             </div>
           </div>
 
@@ -160,16 +151,13 @@ function Dashboard() {
             </div>
 
             <div className="w-full bg-slate-700 rounded-full h-3 mt-2">
-
               <div className="bg-purple-500 h-3 rounded-full w-0"></div>
-
             </div>
           </div>
 
         </div>
 
       </div>
-
     </Layout>
   );
 }
