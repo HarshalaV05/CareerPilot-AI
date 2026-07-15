@@ -5,30 +5,25 @@ function UploadResume({ onAnalysis }) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Select PDF
   const handleFileChange = (event) => {
-    console.log("File input changed");
-
     const selectedFile = event.target.files?.[0];
-
-    console.log("Selected File:", selectedFile);
 
     if (!selectedFile) {
       setFile(null);
-      alert("No file selected.");
+      return;
+    }
+
+    if (selectedFile.type !== "application/pdf") {
+      alert("Please upload a PDF resume.");
       return;
     }
 
     setFile(selectedFile);
-    alert(`Selected: ${selectedFile.name}`);
   };
 
-  // Analyze Resume
   const handleAnalyze = async () => {
-    console.log("Current File:", file);
-
     if (!file) {
-      alert("Please choose a PDF first.");
+      alert("Please select a PDF resume.");
       return;
     }
 
@@ -38,29 +33,36 @@ function UploadResume({ onAnalysis }) {
       const formData = new FormData();
       formData.append("file", file);
 
-      const response = await api.post("/resume/analyze", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await api.post(
+        "/resume/analyze",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
-      console.log("Resume Response:", response.data);
+      const analysis =
+        response.data.analysis || response.data;
 
-      // Handles both response formats
-      if (response.data.analysis) {
-        onAnalysis(response.data.analysis);
-      } else {
-        onAnalysis(response.data);
-      }
+      console.log("Resume Analysis:", analysis);
+
+      localStorage.setItem(
+        "careerpilot_analysis",
+        JSON.stringify(analysis)
+      );
+
+      // IMPORTANT: Update Resume page
+      onAnalysis(analysis);
 
       alert("Resume analyzed successfully!");
 
     } catch (error) {
-      console.error("Upload Error:", error);
+      console.error(error);
 
       if (error.response) {
-        console.log("Status:", error.response.status);
-        console.log("Response:", error.response.data);
+        console.log(error.response.data);
       }
 
       alert("Resume analysis failed.");
@@ -70,33 +72,49 @@ function UploadResume({ onAnalysis }) {
   };
 
   return (
-    <div className="bg-slate-800 rounded-3xl p-8 shadow-lg">
+    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8">
 
-      <h2 className="text-3xl font-bold text-white mb-6">
-        Upload Resume
+      <h2 className="text-3xl font-bold text-white mb-2">
+        Resume Analyzer
       </h2>
+
+      <p className="text-slate-400 mb-8">
+        Upload your resume to receive AI-powered ATS analysis and career insights.
+      </p>
 
       <div className="flex flex-col md:flex-row items-center gap-6">
 
         <input
           type="file"
-          accept="application/pdf,.pdf"
+          accept=".pdf"
           onChange={handleFileChange}
-          className="block text-white
-                     file:bg-blue-600
-                     file:text-white
-                     file:border-0
-                     file:px-5
-                     file:py-3
-                     file:rounded-xl
-                     file:cursor-pointer
-                     hover:file:bg-blue-700"
+          className="
+            block
+            text-white
+            file:bg-blue-600
+            file:text-white
+            file:border-0
+            file:px-5
+            file:py-3
+            file:rounded-xl
+            file:cursor-pointer
+            hover:file:bg-blue-700
+          "
         />
 
         <button
           onClick={handleAnalyze}
           disabled={loading}
-          className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-8 py-3 rounded-xl transition"
+          className="
+            bg-blue-600
+            hover:bg-blue-700
+            disabled:opacity-50
+            text-white
+            px-8
+            py-3
+            rounded-xl
+            transition
+          "
         >
           {loading ? "Analyzing..." : "Analyze Resume"}
         </button>
@@ -106,12 +124,12 @@ function UploadResume({ onAnalysis }) {
       <div className="mt-6">
 
         {file ? (
-          <p className="text-green-400">
-            📄 Selected File: <strong>{file.name}</strong>
+          <p className="text-emerald-400">
+            📄 {file.name}
           </p>
         ) : (
-          <p className="text-slate-400">
-            No file selected.
+          <p className="text-slate-500">
+            No resume selected.
           </p>
         )}
 

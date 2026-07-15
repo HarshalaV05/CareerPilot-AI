@@ -2,76 +2,77 @@ import { NavLink } from "react-router-dom";
 import {
   FaHome,
   FaFileAlt,
+  FaChartLine,
   FaBriefcase,
   FaUserTie,
-  FaRobot,
 } from "react-icons/fa";
 
 function Sidebar() {
   const menuItems = [
     {
-      name: "Dashboard",
-      icon: <FaHome />,
+      title: "Dashboard",
       path: "/",
+      icon: <FaHome />,
     },
     {
-      name: "Resume Analyzer",
-      icon: <FaFileAlt />,
+      title: "Resume Analyzer",
       path: "/resume",
+      icon: <FaFileAlt />,
     },
     {
-      name: "Career Recommendation",
-      icon: <FaBriefcase />,
+      title: "Career Recommendation",
       path: "/career",
+      icon: <FaChartLine />,
     },
     {
-      name: "Interview Prep",
-      icon: <FaUserTie />,
+      title: "Job Explorer",
+      path: "/jobs",
+      icon: <FaBriefcase />,
+    },
+    {
+      title: "Interview Preparation",
       path: "/interview",
+      icon: <FaUserTie />,
     },
   ];
 
   return (
-    <div className="w-72 min-h-screen bg-slate-900 text-white shadow-2xl">
+    <aside className="w-72 min-h-screen bg-slate-900 border-r border-slate-800 flex flex-col">
 
-      {/* Logo */}
-      <div className="flex items-center gap-3 p-6 border-b border-slate-700">
-        <FaRobot className="text-4xl text-blue-500" />
-        <div>
-          <h1 className="text-2xl font-bold">CareerPilot AI</h1>
-          <p className="text-sm text-slate-400">
-            AI Career Assistant
-          </p>
-        </div>
+      <div className="p-8 border-b border-slate-800">
+
+        <h1 className="text-3xl font-bold text-white">
+          CareerPilot AI
+        </h1>
+
+        <p className="text-slate-400 text-sm mt-2">
+          IBM Granite Powered
+        </p>
+
       </div>
 
-      {/* Navigation */}
-      <div className="mt-6 px-4">
+      <nav className="flex-1 px-4 py-6">
 
         {menuItems.map((item) => (
           <NavLink
-            key={item.name}
+            key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `flex items-center gap-4 p-4 rounded-xl mb-3 transition-all duration-300 ${
+              `flex items-center gap-4 px-5 py-4 rounded-xl mb-3 transition ${
                 isActive
                   ? "bg-blue-600 text-white"
-                  : "hover:bg-slate-800 text-slate-300"
+                  : "text-slate-300 hover:bg-slate-800 hover:text-white"
               }`
             }
           >
-            <span className="text-xl">
-              {item.icon}
-            </span>
-
-            <span className="font-medium">
-              {item.name}
-            </span>
+            <span className="text-xl">{item.icon}</span>
+            <span>{item.title}</span>
           </NavLink>
         ))}
 
-      </div>
-    </div>
+      </nav>
+
+    </aside>
   );
 }
 

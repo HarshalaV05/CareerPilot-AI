@@ -8,52 +8,92 @@ import SkillsSection from "../components/resume/SkillsSection";
 import Summary from "../components/resume/Summary";
 import Suggestions from "../components/resume/Suggestions";
 
+import ResumeMatch from "../components/resume/ResumeMatch";
+import SkillGap from "../components/resume/SkillGap";
+import SalaryInsights from "../components/resume/SalaryInsights";
+import ResumeHealth from "../components/resume/ResumeHealth";
+import CareerMatches from "../components/resume/CareerMatches";
+
 function Resume() {
+  const [analysis, setAnalysis] = useState(null);
 
-    const [analysis, setAnalysis] = useState(null);
+  return (
+    <Layout>
 
-    return (
+      <UploadResume
+        onAnalysis={setAnalysis}
+      />
 
-        <Layout>
+      {analysis && (
 
-            <UploadResume
-                onAnalysis={setAnalysis}
+        <div className="space-y-8 mt-10">
+
+          {/* Top Statistics */}
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <ATSScore
+              score={analysis.ats_score}
             />
 
-            {analysis && (
+            <ResumeHealth />
 
-                <div className="space-y-8 mt-10">
+          </div>
 
-                    <ATSScore
-                        score={analysis.ats_score}
-                    />
+          {/* Skills */}
 
-                    <SkillsSection
-                        title="Technical Skills"
-                        skills={analysis.technical_skills}
-                    />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                    <SkillsSection
-                        title="Soft Skills"
-                        skills={analysis.soft_skills}
-                    />
+            <SkillsSection
+              title="Technical Skills"
+              skills={analysis.technical_skills}
+            />
 
-                    <Summary
-                        summary={analysis.resume_summary}
-                    />
+            <SkillsSection
+              title="Soft Skills"
+              skills={analysis.soft_skills}
+            />
 
-                    <Suggestions
-                        suggestions={analysis.improvement_suggestions}
-                    />
+          </div>
 
-                </div>
+          {/* AI Insights */}
 
-            )}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-        </Layout>
+            <ResumeMatch />
 
-    );
+            <CareerMatches />
 
+          </div>
+
+          {/* Salary + Skill Gap */}
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <SalaryInsights />
+
+            <SkillGap />
+
+          </div>
+
+          {/* Summary */}
+
+          <Summary
+            summary={analysis.resume_summary}
+          />
+
+          {/* Suggestions */}
+
+          <Suggestions
+            suggestions={analysis.improvement_suggestions}
+          />
+
+        </div>
+
+      )}
+
+    </Layout>
+  );
 }
 
 export default Resume;

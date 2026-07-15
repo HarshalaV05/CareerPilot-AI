@@ -18,6 +18,3 @@ async def generate(request: InterviewRequest):
 
     return result
 
-@router.get("/debug")
-async def debug():
-    return {"message": "THIS IS MY CURRENT INTERVIEW FILE"}
