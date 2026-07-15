@@ -7,18 +7,20 @@ class JSONParser:
     @staticmethod
     def parse(response: str):
 
-        # Remove markdown code fences
         response = response.replace("```json", "")
         response = response.replace("```", "")
+        response = response.strip()
 
-        # Extract first JSON object
-        match = re.search(r"\{.*\}", response, re.DOTALL)
+        decoder = json.JSONDecoder()
 
-        if match:
+        start = response.find("{")
+
+        while start != -1:
             try:
-                return json.loads(match.group())
+                obj, end = decoder.raw_decode(response[start:])
+                return obj
             except json.JSONDecodeError:
-                pass
+                start = response.find("{", start + 1)
 
         return {
             "raw_response": response
