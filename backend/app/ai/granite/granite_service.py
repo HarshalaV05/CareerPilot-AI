@@ -1,4 +1,5 @@
 from app.ai.granite.ibm_client import IBMClient
+
 from app.ai.granite.prompts import RESUME_ANALYSIS_PROMPT
 from app.ai.granite.career_prompt import CAREER_PROMPT
 from app.ai.granite.job_prompt import JOB_MATCH_PROMPT
@@ -22,11 +23,16 @@ class GraniteService:
             prompt=prompt
         )
 
+        print("\n========== RESUME TEXT ==========\n")
+        print(resume_text[:1500])
+
         print("\n========== IBM RESPONSE ==========\n")
         print(response)
-        print("\n==================================\n")
 
         analysis = JSONParser.parse(response)
+
+        print("\n========== PARSED JSON ==========\n")
+        print(analysis)
 
         return analysis
 
@@ -42,6 +48,9 @@ class GraniteService:
         response = model.generate_text(
             prompt=prompt
         )
+
+        print("\n========== CAREER RESPONSE ==========\n")
+        print(response)
 
         return JSONParser.parse(response)
 
@@ -59,18 +68,25 @@ class GraniteService:
             prompt=prompt
         )
 
+        print("\n========== JOB MATCH RESPONSE ==========\n")
+        print(response)
+
         return JSONParser.parse(response)
+
     @staticmethod
     def generate_interview_questions(role: str):
 
         model = IBMClient.get_model()
 
         prompt = INTERVIEW_PROMPT.format(
-        role=role
-     )
+            role=role
+        )
 
         response = model.generate_text(
             prompt=prompt
-       )
+        )
+
+        print("\n========== INTERVIEW RESPONSE ==========\n")
+        print(response)
 
         return JSONParser.parse(response)
