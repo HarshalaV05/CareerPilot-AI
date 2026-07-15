@@ -15,9 +15,19 @@ import ResumeHealth from "../components/resume/ResumeHealth";
 import CareerMatches from "../components/resume/CareerMatches";
 
 function Resume() {
-  const [analysis, setAnalysis] = useState(null);
+
+  const [analysis, setAnalysis] = useState(() => {
+
+    const saved = localStorage.getItem("careerpilot_analysis");
+
+    return saved ? JSON.parse(saved) : null;
+
+  });
+
+  console.log("Resume State:", analysis);
 
   return (
+
     <Layout>
 
       <UploadResume
@@ -28,7 +38,7 @@ function Resume() {
 
         <div className="space-y-8 mt-10">
 
-          {/* Top Statistics */}
+          {/* ATS + Resume Health */}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
@@ -36,7 +46,9 @@ function Resume() {
               score={analysis.ats_score}
             />
 
-            <ResumeHealth />
+            <ResumeHealth
+              score={analysis.ats_score}
+            />
 
           </div>
 
@@ -46,23 +58,28 @@ function Resume() {
 
             <SkillsSection
               title="Technical Skills"
-              skills={analysis.technical_skills}
+              skills={analysis.technical_skills || []}
             />
 
             <SkillsSection
               title="Soft Skills"
-              skills={analysis.soft_skills}
+              skills={analysis.soft_skills || []}
             />
 
           </div>
 
-          {/* AI Insights */}
+          {/* Resume Match + Career */}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            <ResumeMatch />
+            <ResumeMatch
+              roles={analysis.recommended_job_roles || []}
+              score={analysis.ats_score}
+            />
 
-            <CareerMatches />
+            <CareerMatches
+              roles={analysis.recommended_job_roles || []}
+            />
 
           </div>
 
@@ -72,20 +89,22 @@ function Resume() {
 
             <SalaryInsights />
 
-            <SkillGap />
+            <SkillGap
+              skills={analysis.missing_skills || []}
+            />
 
           </div>
 
-          {/* Summary */}
+          {/* Resume Summary */}
 
           <Summary
-            summary={analysis.resume_summary}
+            summary={analysis.resume_summary || ""}
           />
 
           {/* Suggestions */}
 
           <Suggestions
-            suggestions={analysis.improvement_suggestions}
+            suggestions={analysis.improvement_suggestions || []}
           />
 
         </div>
@@ -93,7 +112,9 @@ function Resume() {
       )}
 
     </Layout>
+
   );
+
 }
 
 export default Resume;
