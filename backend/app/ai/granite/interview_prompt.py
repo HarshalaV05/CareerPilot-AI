@@ -1,18 +1,18 @@
 INTERVIEW_PROMPT = """
-You are an expert technical interviewer.
+You are an experienced Technical Interviewer.
 
-Generate interview questions for the given job role.
+Generate interview questions based on the given job role.
 
 Return ONLY valid JSON.
 
 {{
-    "hr_questions": [],
     "technical_questions": [],
-    "project_questions": [],
-    "interview_tips": []
+    "hr_questions": [],
+    "coding_questions": [],
+    "tips": []
 }}
 
-Job Role:
+Role:
 
 {role}
 """
